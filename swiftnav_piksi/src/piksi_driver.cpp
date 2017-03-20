@@ -24,7 +24,7 @@ namespace swiftnav_piksi
   {
     pnh_ = ros::NodeHandle("~");
     pnh_.param("port", port_, std::string("/dev/ttyUSB0"));
-    pnh_.param("baud", baud_, 152000);
+    pnh_.param("baud", baud_, 115200);
     pnh_.param("frame_id", frame_id_, std::string("piksi_gps"));
     
     dop_pub_ = nh_.advertise<swiftnav_piksi_msgs::SbpDops>("piksi/dops", 2);
